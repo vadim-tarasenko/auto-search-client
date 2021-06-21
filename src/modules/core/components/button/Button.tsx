@@ -1,30 +1,13 @@
 import { FC } from 'react';
 
-import './button.css';
 import type { ButtonProps } from './button.interface';
 
-// todo: this is only example component
-export const Button: FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
-
+const Button: FC<ButtonProps> = ({ children, ...props }) => {
   return (
-    <button
-      type='button'
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
+    <button type='button' {...props}>
+      {children}
     </button>
   );
 };
+
+export default Button;
