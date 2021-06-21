@@ -1,6 +1,6 @@
-import './button.css';
 import { FC } from 'react';
 
+import './button.css';
 import type { ButtonProps } from './button.interface';
 
 // todo: this is only example component
