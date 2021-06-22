@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Root = styled.div`
-  background-color: red;
+  background-color: ${(props) => props.theme.palette.general['30']};
 `;
 
 function Home() {
